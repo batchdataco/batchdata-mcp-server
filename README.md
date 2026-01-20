@@ -32,8 +32,8 @@ We are actively developing an improved integration method that will provide bett
 
 ## Choose Your Setup Path
 
-**Using Claude Desktop?** → Follow [Claude Desktop Setup]()  
-**Using your own MCP client?** → Follow [Custom MCP Client Setup]()
+**Using Claude Desktop?** → Follow [Claude Desktop Setup](#claude-desktop-setup)  
+**Using your own MCP client?** → Follow [Custom MCP Client Setup](#custom-mcp-client-setup)
 
 * * *
 
