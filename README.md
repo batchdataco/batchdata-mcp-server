@@ -42,13 +42,12 @@
   * 7.4 [Contact Information](#Contact-Information)
   * 7.5 [Phone Verification](#Phone-Verification)
   * 7.6 [Address Processing](#Address-Processing)
-* 8 [Staging Server (Internal Use)](#Staging-Server-\(Internal-Use\))
-* 9 [Troubleshooting](#Troubleshooting)
-  * 9.1 [OAuth Issues](#OAuth-Issues)
-  * 9.2 [ChatGPT Issues](#ChatGPT-Issues)
-  * 9.3 [API Token Issues](#API-Token-Issues)
-  * 9.4 [General Issues](#General-Issues)
-  * 9.5 [Getting Help](#Getting-Help)
+* 8 [Troubleshooting](#Troubleshooting)
+  * 8.1 [OAuth Issues](#OAuth-Issues)
+  * 8.2 [ChatGPT Issues](#ChatGPT-Issues)
+  * 8.3 [API Token Issues](#API-Token-Issues)
+  * 8.4 [General Issues](#General-Issues)
+  * 8.5 [Getting Help](#Getting-Help)
 
 ## Introduction
 
