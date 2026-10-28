@@ -36,12 +36,13 @@
   * 6.3 [ChatGPT](#ChatGPT)
   * 6.4 [Benefits of Migrating](#Benefits-of-Migrating)
 * 7 [Available Tools](#Available-Tools)
-  * 7.1 [Property Lookup & Details](#Property-Lookup-%26-Details)
-  * 7.2 [Comparable Property Analysis](#Comparable-Property-Analysis)
-  * 7.3 [Property Search](#Property-Search)
-  * 7.4 [Contact Information](#Contact-Information)
-  * 7.5 [Phone Verification](#Phone-Verification)
-  * 7.6 [Address Processing](#Address-Processing)
+  * 7.1 [Property](#Property)
+  * 7.2 [Comps](#Comps)
+  * 7.3 [Search](#Search)
+  * 7.4 [Skip trace and contact](#Skip-trace-and-contact)
+  * 7.5 [Phone compliance](#Phone-compliance)
+  * 7.6 [Address](#Address)
+  * 7.7 [Datasets and investor buy box](#Datasets-and-investor-buy-box)
 * 8 [Troubleshooting](#Troubleshooting)
   * 8.1 [OAuth Issues](#OAuth-Issues)
   * 8.2 [ChatGPT Issues](#ChatGPT-Issues)
@@ -430,52 +431,63 @@ If you were using a workaround with API tokens, simply:
 
 ## Available Tools
 
-Once connected, the BatchData MCP Server provides the following tools:
+Once connected, the BatchData MCP Server registers the following 21 tools:
 
-### Property Lookup & Details
-
-| Tool | Description |
-| :-- | :-- |
-| lookup_property | Get detailed property information by ID, address, or parcel number |
-
-### Comparable Property Analysis
+### Property
 
 | Tool | Description |
 | :-- | :-- |
-| comparable_property_count | Get count and aggregated metrics of comparable properties |
-| comparable_property_preview | Quick preview of first 10 comparables with summary fields |
-| comparable_property_page | Paginated access to full comparable property details (supports both offset and cursor-based pagination) |
-| comparable_property | ⚠️ Deprecated — Returns all comparables at once |
+| lookup_property | Returns property details for a real-estate property based on its propertyId or its address as (street + city + state + zip) or its parcel number as (countyFipsCode + APN). |
 
-### Property Search
+### Comps
 
 | Tool | Description |
 | :-- | :-- |
-| search_properties_count | Get count of properties matching search criteria with quicklist breakdowns |
-| search_properties_preview | Quick preview of first 10 matching properties |
-| search_properties_page | Paginated property search with full details (supports offset and cursor-based pagination) |
+| comparable_property_count | Returns the total count of comparable properties and aggregated metrics (estimatedValue, averagePrice, averagePricePerSqft) without returning individual comparable records. |
+| comparable_property_preview | Returns a quick preview of the first 10 comparable properties with summary fields (address, price, sqft, beds/baths, sale date, distance), plus total count and aggregated metrics. |
+| comparable_property_page | Paginated access to comparable properties with full details (page size: 10). |
+| comparable_property | **Deprecated.** Use comparable_property_count, comparable_property_preview, or comparable_property_page instead. Returns all comparables, which can overload context windows. |
 
-### Contact Information
-
-| Tool | Description |
-| :-- | :-- |
-| skip_trace_property | Get owner and contact information for a property by address or parcel number |
-
-### Phone Verification
+### Search
 
 | Tool | Description |
 | :-- | :-- |
-| verify_phone | Full verification details including reachability, DNC status, carrier, TCPA litigator status |
-| check_dnc_status | Check Do Not Call status only |
-| check_tcpa_status | Check TCPA litigator status only |
+| search_properties_count | Returns total count of properties matching search criteria and quicklist breakdowns. |
+| search_properties_preview | Returns a quick preview of the first 10 properties with essential fields, plus total count. |
+| search_properties_page | Paginated property search with full details (page size: 10). |
 
-### Address Processing
+### Skip trace and contact
 
 | Tool | Description |
 | :-- | :-- |
-| verify_address | Format addresses to USPS compliance |
-| geocode_address | Get coordinates from an address |
-| reverse_geocode_address | Get address from latitude/longitude coordinates |
+| skip_trace_property | Returns contact information for the property owner and any other people associated with a real-estate property based on its address as (street + city + state + zip) or (street + city + state) or (street + zip) or its parcel number as (state + county + APN) or (countyFipsCode + APN). |
+| reverse_skip_trace | Returns associated person information (name, addresses, phones, emails) for one or more phone numbers or email addresses. |
+
+### Phone compliance
+
+| Tool | Description |
+| :-- | :-- |
+| verify_phone | Returns full verification details of a phone number including reachability, DNC status, carrier info, TCPA litigator status, and more. |
+| check_dnc_status | Checks only the DNC (Do Not Call) status of a phone number. |
+| check_tcpa_status | Checks only the TCPA litigator status of a phone number. |
+
+### Address
+
+| Tool | Description |
+| :-- | :-- |
+| verify_address | Accepts a property address in the format of street + city + state + zip, or street + city + state, or street + zip and returns an address formatted to comply with USPS conventions. |
+| geocode_address | Accepts a property address in the format of a single text string representing the street + city + state + zip, or street + city + state, or street + zip and returns the geo-coordinates for the requested address. |
+| reverse_geocode_address | Accepts geo-coordinates in the form of latitude and longitude values and returns the address at those coordinates. |
+
+### Datasets and investor buy box
+
+| Tool | Description |
+| :-- | :-- |
+| list_property_datasets | Returns all available property datasets with field counts and sample fields. |
+| list_property_dataset_fields | Returns the full list of field paths for a specific property dataset. |
+| investor_buybox_count | Returns the total count of investors matching the buy box criteria and aggregate result metadata, without returning individual investor records. This is not free: it bills for 1 record. |
+| investor_buybox_preview | Returns a quick preview of the first 10 ranked investor profiles matching the buy box criteria, plus total count and aggregate result metadata. |
+| investor_buybox_page | Paginated access to investors matching the buy box criteria with full details (page size: 10). |
 
 * * *
 
