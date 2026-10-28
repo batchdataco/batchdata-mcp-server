@@ -145,4 +145,8 @@ Skip tracing (v3) must be enabled for your team by an admin, and API tokens need
 
 Questions or problems: **support@batchservice.com**. For API reference, see [developer.batchdata.com](https://developer.batchdata.com/).
 
+## License
+
+This repository contains documentation and configuration only, and is MIT licensed. The BatchData MCP server at mcp.batchdata.com, the BatchData API, and its data are proprietary and are governed by the BatchData terms of service.
+
 © BatchData
