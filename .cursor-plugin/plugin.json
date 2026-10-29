@@ -1,0 +1,13 @@
+{
+  "name": "batchdata",
+  "description": "BatchData MCP server: U.S. real estate data for AI agents (property lookup, search, comps, skip tracing, phone and address checks). Sign in with your BatchData account via OAuth.",
+  "version": "1.0.0",
+  "author": {
+    "name": "BatchData",
+    "email": "support@batchservice.com"
+  },
+  "homepage": "https://batchdata.io/mcp-server",
+  "repository": "https://github.com/batchdataco/batchdata-mcp-server",
+  "license": "MIT",
+  "keywords": ["real-estate", "property-data", "skip-tracing", "mcp", "batchdata"]
+}
