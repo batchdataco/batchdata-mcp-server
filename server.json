@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.batchdataco/batchdata-mcp-server",
+  "title": "BatchData",
+  "description": "Real estate data for AI agents: property lookup, comps, search, skip tracing, phone/address checks",
+  "version": "1.0.0",
+  "websiteUrl": "https://batchdata.io/mcp-server",
+  "repository": {
+    "url": "https://github.com/batchdataco/batchdata-mcp-server",
+    "source": "github",
+    "id": "1138437051"
+  },
+  "icons": [
+    {
+      "src": "https://batchdata.io/wp-content/uploads/2025/05/cropped-batch-icon-green-2.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.batchdata.com",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Only for clients without OAuth support: 'Bearer <your BatchData API token>'. OAuth 2.1 browser sign-in is the default and needs no header.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
