@@ -49,7 +49,9 @@ Cursor opens a browser window to sign in the first time a tool is used.
 
 ### VS Code (GitHub Copilot)
 
-Add this to `.vscode/mcp.json` in your workspace (or run **MCP: Add Server** from the Command Palette):
+[Install in VS Code](vscode:mcp/install?%7B%22name%22%3A%22batchdata%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.batchdata.com%22%7D) (opens VS Code and prompts to install the server; use `vscode-insiders:` instead of `vscode:` for Insiders)
+
+Or configure it manually. Add this to `.vscode/mcp.json` in your workspace (or run **MCP: Add Server** from the Command Palette):
 
 ```json
 {
@@ -67,6 +69,12 @@ Or from a terminal:
 ```bash
 code --add-mcp '{"name":"batchdata","type":"http","url":"https://mcp.batchdata.com"}'
 ```
+
+### Replit
+
+[![Add to Replit](https://replit.com/badge?caption=Add%20to%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IkJhdGNoRGF0YSIsImJhc2VVcmwiOiJodHRwczovL21jcC5iYXRjaGRhdGEuY29tIn0=)
+
+Or in Replit open **Integrations → MCP Servers → + Add MCP server**, set the display name to `BatchData` and the URL to `https://mcp.batchdata.com`, then click **Test & save** and sign in with your BatchData account.
 
 ### ChatGPT (Developer Mode)
 
