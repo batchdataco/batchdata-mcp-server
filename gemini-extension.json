@@ -1,0 +1,11 @@
+{
+  "name": "batchdata-mcp-server",
+  "version": "1.0.0",
+  "description": "BatchData's official hosted MCP server: U.S. real estate data for AI agents (property lookup, comps, property search, owner skip tracing, phone and address checks). Requires a BatchData account.",
+  "mcpServers": {
+    "batchdata": {
+      "url": "https://mcp.batchdata.com",
+      "type": "http"
+    }
+  }
+}
