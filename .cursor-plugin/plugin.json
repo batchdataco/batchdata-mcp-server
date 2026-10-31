@@ -1,6 +1,7 @@
 {
   "name": "batchdata",
   "description": "BatchData MCP server: U.S. real estate data for AI agents (property lookup, search, comps, skip tracing, phone and address checks). Sign in with your BatchData account via OAuth.",
+  "logo": "assets/batchdata-logo-512.png",
   "version": "1.0.0",
   "author": {
     "name": "BatchData",
