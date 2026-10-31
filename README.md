@@ -29,6 +29,15 @@ claude mcp add --transport http batchdata https://mcp.batchdata.com
 
 Then run `/mcp` inside Claude Code and choose **batchdata** to sign in.
 
+### Claude Code plugin (skills and MCP server together)
+
+```text
+/plugin marketplace add batchdataco/batchdata-mcp-server
+/plugin install batchdata --marketplace batchdataco/batchdata-mcp-server
+```
+
+The plugin connects the same server and adds skills for property lookup, comps, property search and lead lists, skip tracing, DNC and TCPA phone checks, investor finder, and building permits (permits are available through the REST API only, not as an MCP tool). The skills live in [`skills/`](skills/).
+
 ### Cursor
 
 [Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=batchdata&config=eyJ1cmwiOiJodHRwczovL21jcC5iYXRjaGRhdGEuY29tIn0=)
