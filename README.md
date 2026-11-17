@@ -29,6 +29,15 @@ claude mcp add --transport http batchdata https://mcp.batchdata.com
 
 Then run `/mcp` inside Claude Code and choose **batchdata** to sign in.
 
+### Claude Code plugin (skills and MCP server together)
+
+```text
+/plugin marketplace add batchdataco/batchdata-mcp-server
+/plugin install batchdata --marketplace batchdataco/batchdata-mcp-server
+```
+
+The plugin connects the same server and adds skills for property lookup, comps, property search and lead lists, skip tracing, DNC and TCPA phone checks, investor finder, and building permits (permits are available through the REST API only, not as an MCP tool). The skills live in [`skills/`](skills/).
+
 ### Cursor
 
 [Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=batchdata&config=eyJ1cmwiOiJodHRwczovL21jcC5iYXRjaGRhdGEuY29tIn0=)
@@ -49,7 +58,9 @@ Cursor opens a browser window to sign in the first time a tool is used.
 
 ### VS Code (GitHub Copilot)
 
-Add this to `.vscode/mcp.json` in your workspace (or run **MCP: Add Server** from the Command Palette):
+[Install in VS Code](vscode:mcp/install?%7B%22name%22%3A%22batchdata%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.batchdata.com%22%7D) (opens VS Code and prompts to install the server; use `vscode-insiders:` instead of `vscode:` for Insiders)
+
+Or configure it manually. Add this to `.vscode/mcp.json` in your workspace (or run **MCP: Add Server** from the Command Palette):
 
 ```json
 {
@@ -67,6 +78,12 @@ Or from a terminal:
 ```bash
 code --add-mcp '{"name":"batchdata","type":"http","url":"https://mcp.batchdata.com"}'
 ```
+
+### Replit
+
+[![Add to Replit](https://replit.com/badge?caption=Add%20to%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IkJhdGNoRGF0YSIsImJhc2VVcmwiOiJodHRwczovL21jcC5iYXRjaGRhdGEuY29tIn0=)
+
+Or in Replit open **Integrations → MCP Servers → + Add MCP server**, set the display name to `BatchData` and the URL to `https://mcp.batchdata.com`, then click **Test & save** and sign in with your BatchData account.
 
 ### ChatGPT (Developer Mode)
 

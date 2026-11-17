@@ -1,0 +1,20 @@
+{
+  "name": "batchdata",
+  "owner": {
+    "name": "BatchData",
+    "email": "support@batchservice.com"
+  },
+  "metadata": {
+    "description": "BatchData U.S. real estate data skills and MCP server"
+  },
+  "plugins": [
+    {
+      "name": "batchdata",
+      "source": "./",
+      "description": "U.S. real estate data for AI agents: property lookup, comps, search and lead lists, skip tracing, DNC and TCPA checks, investor finder.",
+      "version": "1.0.0",
+      "homepage": "https://batchdata.io/mcp-server",
+      "license": "MIT"
+    }
+  ]
+}
