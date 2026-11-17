@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "batchdata",
+  "description": "U.S. real estate data for AI agents: property lookup, comps, property search and lead lists, skip tracing, DNC and TCPA phone checks, and address verification and geocoding. Connects to the hosted BatchData MCP server at https://mcp.batchdata.com with OAuth sign-in.",
+  "version": "1.0.0",
+  "keywords": [
+    "real-estate",
+    "property-data",
+    "comps",
+    "skip-tracing",
+    "lead-lists",
+    "geocoding",
+    "dnc",
+    "mcp",
+    "batchdata",
+    "copilot"
+  ],
+  "author": {
+    "name": "BatchData",
+    "url": "https://batchdata.io"
+  },
+  "homepage": "https://batchdata.io/mcp-server",
+  "repository": "https://github.com/batchdataco/batchdata-mcp-server",
+  "license": "MIT",
+  "extensions": {
+    "com.github.awesome-copilot": {
+      "skills": [
+        "./skills/dnc-tcpa-check/",
+        "./skills/investor-finder/",
+        "./skills/property-comps/",
+        "./skills/property-lookup/",
+        "./skills/property-permits/",
+        "./skills/property-search-lead-lists/",
+        "./skills/skip-trace/"
+      ]
+    }
+  }
+}
