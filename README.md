@@ -79,6 +79,20 @@ Or from a terminal:
 code --add-mcp '{"name":"batchdata","type":"http","url":"https://mcp.batchdata.com"}'
 ```
 
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/batchdataco/batchdata-mcp-server
+```
+
+The extension connects the same server and adds the skills in [`skills/`](skills/). Start Gemini CLI and run `/mcp auth batchdata` to sign in with your BatchData account in the browser.
+
+To use an API token instead of OAuth, add the server to your Gemini CLI `settings.json`. A server in `settings.json` takes precedence over the extension server with the same name:
+
+```bash
+gemini mcp add --scope user --transport http --header "Authorization: Bearer YOUR_API_TOKEN_HERE" batchdata https://mcp.batchdata.com
+```
+
 ### Replit
 
 [![Add to Replit](https://replit.com/badge?caption=Add%20to%20Replit)](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IkJhdGNoRGF0YSIsImJhc2VVcmwiOiJodHRwczovL21jcC5iYXRjaGRhdGEuY29tIn0=)

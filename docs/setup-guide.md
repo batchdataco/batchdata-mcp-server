@@ -16,14 +16,15 @@
     * 4.2.6 [Subsequent Connections](#Subsequent-Connections)
   * 4.3 [Cursor Setup](#Cursor-Setup)
   * 4.4 [Claude Code Setup](#Claude-Code-Setup)
-  * 4.5 [ChatGPT Setup (Developer Mode)](#ChatGPT-Setup-\(Developer-Mode\))
-    * 4.5.1 [Prerequisites](#Prerequisites.1)
-    * 4.5.2 [Step 1: Enable Developer Mode](#Step-1%3A-Enable-Developer-Mode)
-    * 4.5.3 [Step 2: Create the BatchData Connector](#Step-2%3A-Create-the-BatchData-Connector)
-    * 4.5.4 [Step 3: Authenticate](#Step-3%3A-Authenticate)
-    * 4.5.5 [Using BatchData Tools in ChatGPT](#Using-BatchData-Tools-in-ChatGPT)
-    * 4.5.6 [Managing the Connection](#Managing-the-Connection)
-  * 4.6 [Verification](#Verification)
+  * 4.5 [Gemini CLI Setup](#Gemini-CLI-Setup)
+  * 4.6 [ChatGPT Setup (Developer Mode)](#ChatGPT-Setup-\(Developer-Mode\))
+    * 4.6.1 [Prerequisites](#Prerequisites.1)
+    * 4.6.2 [Step 1: Enable Developer Mode](#Step-1%3A-Enable-Developer-Mode)
+    * 4.6.3 [Step 2: Create the BatchData Connector](#Step-2%3A-Create-the-BatchData-Connector)
+    * 4.6.4 [Step 3: Authenticate](#Step-3%3A-Authenticate)
+    * 4.6.5 [Using BatchData Tools in ChatGPT](#Using-BatchData-Tools-in-ChatGPT)
+    * 4.6.6 [Managing the Connection](#Managing-the-Connection)
+  * 4.7 [Verification](#Verification)
 * 5 [API Token Setup (Alternative)](#API-Token-Setup-\(Alternative\))
   * 5.1 [Prerequisites](#Prerequisites.2)
   * 5.2 [Claude Desktop Setup with API Token](#Claude-Desktop-Setup-with-API-Token)
@@ -194,6 +195,16 @@ claude mcp add --transport http batchdata https://mcp.batchdata.com
 ```
 
 On first use, you'll be prompted to authenticate through your browser.
+
+### Gemini CLI Setup
+
+Install the BatchData extension:
+
+```
+gemini extensions install https://github.com/batchdataco/batchdata-mcp-server
+```
+
+Start Gemini CLI and run `/mcp auth batchdata`. Sign in with your BatchData account in the browser.
 
 ### ChatGPT Setup (Developer Mode)
 
